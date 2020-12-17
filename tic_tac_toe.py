@@ -186,8 +186,7 @@ while True:
         print(field)
         print(f"Выиграл {g}!")
         break
-    elif a != "a" and b != "b" and c != "c" and d != "d" and e != "e" and f != "f" and g != "g" and h != "h" \
-            and i != "i" or count >= 8:
+    elif count >= 9:
         field = f""" 
                     Добро пожаловать в игру Крестики-Нолики!
                 Ниже представлено импровизированное поле для игры:
