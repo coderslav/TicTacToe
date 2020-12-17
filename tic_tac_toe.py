@@ -8,6 +8,76 @@ g = "g"
 h = "h"
 i = "i"
 count = 0
+
+
+def x_turn(turn_x):
+    global a, b, c, d, e, f, g, h, i, count
+    if turn_x == "a" and a != "X" and a != "O":
+        a = "X"
+        return a
+    elif turn_x == "b" and b != "X" and b != "O":
+        b = "X"
+        return b
+    elif turn_x == "c" and c != "X" and c != "O":
+        c = "X"
+        return c
+    elif turn_x == "d" and d != "X" and d != "O":
+        d = "X"
+        return d
+    elif turn_x == "e" and e != "X" and e != "O":
+        e = "X"
+        return e
+    elif turn_x == "f" and f != "X" and f != "O":
+        f = "X"
+        return f
+    elif turn_x == "g" and g != "X" and g != "O":
+        g = "X"
+        return g
+    elif turn_x == "h" and h != "X" and h != "O":
+        h = "X"
+        return h
+    elif turn_x == "i" and i != "X" and i != "O":
+        i = "X"
+        return i
+    else:
+        print("Неверный ввод! Попробуйте снова!")
+        count -= 1
+
+
+def o_turn(turn_o):
+    global a, b, c, d, e, f, g, h, i, count
+    if turn_o == "a" and a != "X" and a != "O":
+        a = "O"
+        return a
+    elif turn_o == "b" and b != "X" and b != "O":
+        b = "O"
+        return b
+    elif turn_o == "c" and c != "X" and c != "O":
+        c = "O"
+        return c
+    elif turn_o == "d" and d != "X" and d != "O":
+        d = "O"
+        return d
+    elif turn_o == "e" and e != "X" and e != "O":
+        e = "O"
+        return e
+    elif turn_o == "f" and f != "X" and f != "O":
+        f = "O"
+        return f
+    elif turn_o == "g" and g != "X" and g != "O":
+        g = "O"
+        return g
+    elif turn_o == "h" and h != "X" and h != "O":
+        h = "O"
+        return h
+    elif turn_o == "i" and i != "X" and i != "O":
+        i = "O"
+        return i
+    else:
+        print("Неверный ввод! Попробуйте снова!")
+        count -= 1
+
+
 while True:
     field = f""" 
             Добро пожаловать в игру Крестики-Нолики!
@@ -24,48 +94,10 @@ while True:
     print(field)
     if count % 2 != 0:
         turn = input("Ходите, X: ").lower()
+        x_turn(turn)
     else:
         turn = input("Ходите, O: ").lower()
-    if turn == "a" and count % 2 != 0:
-        a = "X"
-    elif turn == "a" and count % 2 == 0:
-        a = "O"
-    elif turn == "b" and count % 2 != 0:
-        b = "X"
-    elif turn == "b" and count % 2 == 0:
-        b = "O"
-    elif turn == "c" and count % 2 != 0:
-        c = "X"
-    elif turn == "c" and count % 2 == 0:
-        c = "O"
-    elif turn == "d" and count % 2 != 0:
-        d = "X"
-    elif turn == "d" and count % 2 == 0:
-        d = "O"
-    elif turn == "e" and count % 2 != 0:
-        e = "X"
-    elif turn == "e" and count % 2 == 0:
-        e = "O"
-    elif turn == "f" and count % 2 != 0:
-        f = "X"
-    elif turn == "f" and count % 2 == 0:
-        f = "O"
-    elif turn == "g" and count % 2 != 0:
-        g = "X"
-    elif turn == "g" and count % 2 == 0:
-        g = "O"
-    elif turn == "h" and count % 2 != 0:
-        h = "X"
-    elif turn == "h" and count % 2 == 0:
-        h = "O"
-    elif turn == "i" and count % 2 != 0:
-        i = "X"
-    elif turn == "i" and count % 2 == 0:
-        i = "O"
-    else:
-        print("Неверный ввод! Попробуйте снова!")
-        count -= 1
-        continue
+        o_turn(turn)
     if a == b == c:
         field = f""" 
                     Добро пожаловать в игру Крестики-Нолики!
